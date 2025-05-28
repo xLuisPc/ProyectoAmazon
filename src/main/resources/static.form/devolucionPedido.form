@@ -25,24 +25,27 @@
       "key": "Fecha_compra"
     },
     {
-      "label": "",
-      "type": "textfield",
-      "layout": {
-        "row": "Row_1qfxfc9",
-        "columns": null
-      },
-      "id": "Field_0xai6xy",
-      "key": "Motivo",
-      "validate": {
-        "required": true
-      }
-    },
-    {
       "label": "Motivo de la devolución",
       "values": [
         {
-          "label": "Value",
-          "value": "value"
+          "label": "No satisfecho con el producto <30 dias",
+          "value": "porTiempo"
+        },
+        {
+          "label": "Producto defectuoso",
+          "value": "porDefecto"
+        },
+        {
+          "label": "Producto erroneo",
+          "value": "porProducto"
+        },
+        {
+          "label": "Producto incomplero",
+          "value": "porAccesorios"
+        },
+        {
+          "label": "Producto no necesario",
+          "value": "porNecesidad"
         }
       ],
       "type": "checklist",
