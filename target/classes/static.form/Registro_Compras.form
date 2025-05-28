@@ -1,0 +1,133 @@
+{
+  "components": [
+    {
+      "label": "Nombre del comprador:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1lcvkkp",
+        "columns": null
+      },
+      "id": "Field_0c1nu9a",
+      "key": "Nombre",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Pais:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1mtutrg",
+        "columns": null
+      },
+      "id": "Field_1h5rix7",
+      "key": "Pais",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Estado",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1pafwtq",
+        "columns": null
+      },
+      "id": "Field_01zcoeo",
+      "key": "Estado",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Ciudad",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0bl1w6i",
+        "columns": null
+      },
+      "id": "Field_03af6mu",
+      "key": "Ciudad",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Direccion",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_01toh13",
+        "columns": null
+      },
+      "id": "Field_08426rh",
+      "key": "Direccion",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Tipo de entrega",
+      "values": [
+        {
+          "label": "Nacional",
+          "value": "nacional"
+        },
+        {
+          "label": "Internacional",
+          "value": "internacional"
+        }
+      ],
+      "type": "checklist",
+      "layout": {
+        "row": "Row_17miw7v",
+        "columns": null
+      },
+      "id": "Field_1o4qsro",
+      "key": "tipoEntrega",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Productos a comprar",
+      "values": [
+        {
+          "label": "PlayStation5 (500USD)",
+          "value": "ps5"
+        },
+        {
+          "label": "Batidora (30USD) ",
+          "value": "batidora"
+        },
+        {
+          "label": "Mochila (80USD)",
+          "value": "mochila"
+        },
+        {
+          "label": "Tenis Adiclas (120USD)",
+          "value": "tenis"
+        },
+        {
+          "label": "Par de Medias (2USD)",
+          "value": "medias"
+        }
+      ],
+      "type": "checklist",
+      "layout": {
+        "row": "Row_1wn8rli",
+        "columns": null
+      },
+      "id": "Field_1tngt4e",
+      "key": "productos"
+    }
+  ],
+  "type": "default",
+  "id": "Registro_Compras",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.32.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 18
+}

@@ -1,0 +1,66 @@
+{
+  "components": [
+    {
+      "label": "Nombre del comprador",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1euyust",
+        "columns": null
+      },
+      "id": "Field_0yv79f6",
+      "key": "Nombre_comprador",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Fecha de la compra",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_198rnfd",
+        "columns": null
+      },
+      "id": "Field_0gqlpsr",
+      "key": "Fecha_compra"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1qfxfc9",
+        "columns": null
+      },
+      "id": "Field_0xai6xy",
+      "key": "Motivo",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Motivo de la devolución",
+      "values": [
+        {
+          "label": "Value",
+          "value": "value"
+        }
+      ],
+      "type": "checklist",
+      "layout": {
+        "row": "Row_02cnpqo",
+        "columns": null
+      },
+      "id": "Field_1y0pdkk",
+      "key": "checklist_rwsiyj"
+    }
+  ],
+  "type": "default",
+  "id": "devolucionPedido",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.32.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 18
+}
