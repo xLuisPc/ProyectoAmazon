@@ -1,0 +1,74 @@
+{
+  "components": [
+    {
+      "label": "Nombre del comprador",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1euyust",
+        "columns": null
+      },
+      "id": "Field_0yv79f6",
+      "key": "nombre",
+      "validate": {
+        "required": true
+      },
+      "disabled": false
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Fecha de la compra",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_198rnfd",
+        "columns": null
+      },
+      "id": "Field_0gqlpsr",
+      "key": "fechaCompra"
+    },
+    {
+      "label": "Motivo de la devolución",
+      "values": [
+        {
+          "label": "No satisfecho con el producto <30 dias",
+          "value": "porTiempo"
+        },
+        {
+          "label": "Producto defectuoso",
+          "value": "porDefecto"
+        },
+        {
+          "label": "Producto erroneo",
+          "value": "porProducto"
+        },
+        {
+          "label": "Producto incomplero",
+          "value": "porAccesorios"
+        },
+        {
+          "label": "Producto no necesario",
+          "value": "porNecesidad"
+        }
+      ],
+      "type": "checklist",
+      "layout": {
+        "row": "Row_02cnpqo",
+        "columns": null
+      },
+      "id": "Field_1y0pdkk",
+      "key": "motivoDevolucion",
+      "validate": {
+        "required": false
+      },
+      "properties": {}
+    }
+  ],
+  "type": "default",
+  "id": "Devolucion_Pedido",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.33.1"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 18
+}

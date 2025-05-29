@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "label": "Informe de estado del producto",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_137cjgx",
+        "columns": null
+      },
+      "id": "Field_0rox1e4",
+      "key": "condicionProducto"
+    },
+    {
+      "label": "Se encuentra una relacion con respecto a lo que manifesto el cliente?",
+      "values": [
+        {
+          "label": "Si",
+          "value": "si"
+        },
+        {
+          "label": "No",
+          "value": "no"
+        }
+      ],
+      "type": "radio",
+      "layout": {
+        "row": "Row_05nspve",
+        "columns": null
+      },
+      "id": "Field_0fsh8po",
+      "key": "consolidarEstado"
+    }
+  ],
+  "type": "default",
+  "id": "Validar_Condiciones_Producto",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.33.1"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 18
+}
