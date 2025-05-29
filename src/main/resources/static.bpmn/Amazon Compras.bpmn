@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_10o02tr" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.33.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.22.0">
   <bpmn:collaboration id="Collaboration_0h23cb4">
-    <bpmn:participant id="Participant_0h10vfe" name="Amazon" processRef="Process_12zmvni" />
+    <bpmn:participant id="Participant_0h10vfe" name="Amazon" processRef="Compras_Amazon" />
   </bpmn:collaboration>
-  <bpmn:process id="Process_12zmvni" isExecutable="true" camunda:historyTimeToLive="1">
+  <bpmn:process id="Compras_Amazon" isExecutable="true" camunda:historyTimeToLive="1">
     <bpmn:laneSet id="LaneSet_1vguhu3">
       <bpmn:lane id="Lane_0zgcq9l" name="Departamento de ventas">
         <bpmn:flowNodeRef>Activity_158unl4</bpmn:flowNodeRef>
