@@ -10,7 +10,9 @@
       "id": "Field_167mgqt",
       "key": "numTarjeta",
       "validate": {
-        "required": true
+        "required": false,
+        "min": 4,
+        "max": 10
       }
     },
     {
@@ -24,7 +26,7 @@
       "id": "Field_0fym9vj",
       "key": "fecExpira",
       "validate": {
-        "required": true
+        "required": false
       }
     },
     {
@@ -37,20 +39,23 @@
       "id": "Field_12l1er8",
       "key": "codCVV",
       "validate": {
-        "required": true
+        "required": false,
+        "min": 2,
+        "max": 4
       }
     },
     {
-      "label": "Monto a pagar",
-      "type": "textfield",
-      "layout": {
-        "row": "Row_05jn4dt",
-        "columns": null
-      },
-      "id": "Field_05orygc",
-      "key": "valorPago",
-      "disabled": true
-    }
+       "label": "Monto a pagar",
+       "type": "textfield",
+       "layout": {
+          "row": "Row_05jn4dt",
+         "columns": null
+        },
+       "id": "Field_05orygc",
+       "key": "valorPago",
+       "readonly": true,
+       "defaultValue": "=totalPagar"
+}
   ],
   "type": "default",
   "id": "Realizar_Pago",

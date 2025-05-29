@@ -38,7 +38,7 @@
         <bpmn:flowNodeRef>Event_0bw46sz</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
-    <bpmn:serviceTask id="Activity_0sa8p2y" name="Imprimir etiquetas de envío" camunda:class="com.example.workflow.imprimirEtiqueta">
+    <bpmn:serviceTask id="Activity_0sa8p2y" name="Imprimir etiquetas de envío" camunda:class="com.example.workflow.ImprimirEtiqueta">
       <bpmn:incoming>Flow_0avtuyx</bpmn:incoming>
       <bpmn:outgoing>Flow_0tb14v5</bpmn:outgoing>
     </bpmn:serviceTask>
@@ -46,7 +46,7 @@
       <bpmn:incoming>Flow_1arfotn</bpmn:incoming>
       <bpmn:outgoing>Flow_0avtuyx</bpmn:outgoing>
     </bpmn:manualTask>
-    <bpmn:serviceTask id="Activity_158unl4" name="Validar la compras" camunda:class="com.example.workflow.calculoEnvio">
+    <bpmn:serviceTask id="Activity_158unl4" name="Validar la compras" camunda:class="com.example.workflow.CalculoEnvio">
       <bpmn:incoming>Flow_18jzbli</bpmn:incoming>
       <bpmn:outgoing>Flow_1rynbqh</bpmn:outgoing>
     </bpmn:serviceTask>
@@ -64,7 +64,8 @@
       <bpmn:incoming>Flow_0s5963l</bpmn:incoming>
       <bpmn:outgoing>Flow_1arfotn</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:serviceTask id="Activity_0eaxd9o" name="Generar factura de pago" camunda:class="com.example.workflow.generarFactura">
+    <bpmn:serviceTask id="Activity_0eaxd9o" name="Generar factura de pago" camunda:class="com.example.workflow.GenerarFactura">
+      <bpmn:extensionElements />
       <bpmn:incoming>Flow_1rynbqh</bpmn:incoming>
       <bpmn:outgoing>Flow_0ds9fz1</bpmn:outgoing>
     </bpmn:serviceTask>
@@ -132,21 +133,21 @@
     <bpmn:sequenceFlow id="Flow_18jzbli" sourceRef="Event_0c93g3t" targetRef="Activity_158unl4" />
     <bpmn:sequenceFlow id="Flow_1rynbqh" sourceRef="Activity_158unl4" targetRef="Activity_0eaxd9o" />
     <bpmn:sequenceFlow id="Flow_0tz02ff" name="no" sourceRef="Gateway_1k6d83z" targetRef="Activity_19t5xno">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${resPago==denegado}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${resPago=="denegado"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0ostjoy" sourceRef="Activity_19t5xno" targetRef="Event_1i9fab8" />
     <bpmn:sequenceFlow id="Flow_0s5963l" name="si" sourceRef="Gateway_1k6d83z" targetRef="Activity_10g7atx">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${resPago==aprobado}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${resPago=="aprobado"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0ds9fz1" sourceRef="Activity_0eaxd9o" targetRef="Activity_0o13x5q" />
     <bpmn:sequenceFlow id="Flow_1nxxwfr" sourceRef="Activity_0okjpdv" targetRef="Gateway_1k6d83z" />
     <bpmn:sequenceFlow id="Flow_0uwy47z" sourceRef="Activity_0o13x5q" targetRef="Activity_0okjpdv" />
     <bpmn:sequenceFlow id="Flow_1tnlqu7" sourceRef="Activity_1gkudli" targetRef="Event_1enkp14" />
     <bpmn:sequenceFlow id="Flow_1yw8kbq" name="no" sourceRef="Gateway_1j4royq" targetRef="Activity_1htzihs">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${tipoEntrega==internacional}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${tipoEntrega=="internacional"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0xbhi4m" name="si" sourceRef="Gateway_1j4royq" targetRef="Activity_0yibaag">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${tipoEntrega==nacional}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${tipoEntrega=="nacional"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0qpb5cc" sourceRef="Activity_1htzihs" targetRef="Activity_1gkudli" />
     <bpmn:sequenceFlow id="Flow_1v72of6" sourceRef="Activity_0yibaag" targetRef="Activity_10a5v1x" />
@@ -163,24 +164,24 @@
         <dc:Bounds x="160" y="80" width="2120" height="1100" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_0zgcq9l_di" bpmnElement="Lane_0zgcq9l" isHorizontal="true">
-        <dc:Bounds x="190" y="200" width="2090" height="150" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_060ppal_di" bpmnElement="Lane_060ppal" isHorizontal="true">
-        <dc:Bounds x="190" y="80" width="2090" height="120" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_1d06fh0_di" bpmnElement="Lane_1d06fh0" isHorizontal="true">
-        <dc:Bounds x="190" y="350" width="2090" height="180" />
+      <bpmndi:BPMNShape id="Lane_0ikyxqq_di" bpmnElement="Lane_0ikyxqq" isHorizontal="true">
+        <dc:Bounds x="190" y="780" width="2090" height="400" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_02sc1ww_di" bpmnElement="Lane_02sc1ww" isHorizontal="true">
         <dc:Bounds x="190" y="530" width="2090" height="250" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_0ikyxqq_di" bpmnElement="Lane_0ikyxqq" isHorizontal="true">
-        <dc:Bounds x="190" y="780" width="2090" height="400" />
+      <bpmndi:BPMNShape id="Lane_1d06fh0_di" bpmnElement="Lane_1d06fh0" isHorizontal="true">
+        <dc:Bounds x="190" y="350" width="2090" height="180" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_060ppal_di" bpmnElement="Lane_060ppal" isHorizontal="true">
+        <dc:Bounds x="190" y="80" width="2090" height="120" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0zgcq9l_di" bpmnElement="Lane_0zgcq9l" isHorizontal="true">
+        <dc:Bounds x="190" y="200" width="2090" height="150" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1vt7320_di" bpmnElement="Activity_0sa8p2y">
