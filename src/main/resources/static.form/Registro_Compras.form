@@ -8,7 +8,7 @@
         "columns": null
       },
       "id": "Field_0c1nu9a",
-      "key": "Nombre",
+      "key": "nombre",
       "validate": {
         "required": true
       }
@@ -21,7 +21,7 @@
         "columns": null
       },
       "id": "Field_1h5rix7",
-      "key": "Pais",
+      "key": "pais",
       "validate": {
         "required": true
       }
@@ -34,7 +34,7 @@
         "columns": null
       },
       "id": "Field_01zcoeo",
-      "key": "Estado",
+      "key": "estado",
       "validate": {
         "required": true
       }
@@ -47,7 +47,7 @@
         "columns": null
       },
       "id": "Field_03af6mu",
-      "key": "Ciudad",
+      "key": "ciudad",
       "validate": {
         "required": true
       }
@@ -60,7 +60,7 @@
         "columns": null
       },
       "id": "Field_08426rh",
-      "key": "Direccion",
+      "key": "direccion",
       "validate": {
         "required": true
       }
@@ -77,16 +77,13 @@
           "value": "internacional"
         }
       ],
-      "type": "checklist",
+      "type": "radio",
       "layout": {
         "row": "Row_17miw7v",
         "columns": null
       },
-      "id": "Field_1o4qsro",
-      "key": "tipoEntrega",
-      "validate": {
-        "required": true
-      }
+      "id": "Field_10atl82",
+      "key": "tipoEntrega"
     },
     {
       "label": "Productos a comprar",
@@ -125,7 +122,7 @@
   "id": "Registro_Compras",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.32.0"
+    "version": "5.33.1"
   },
   "executionPlatform": "Camunda Platform",
   "executionPlatformVersion": "7.22.0",
