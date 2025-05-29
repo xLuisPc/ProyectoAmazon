@@ -1,0 +1,64 @@
+{
+  "components": [
+    {
+      "label": "Numero de tarjeta",
+      "type": "number",
+      "layout": {
+        "row": "Row_0s25s6t",
+        "columns": null
+      },
+      "id": "Field_167mgqt",
+      "key": "numTarjeta",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Fecha de expiracion",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_05jn4dt",
+        "columns": null
+      },
+      "id": "Field_0fym9vj",
+      "key": "fecExpira",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Codigo CVV",
+      "type": "number",
+      "layout": {
+        "row": "Row_05jn4dt",
+        "columns": null
+      },
+      "id": "Field_12l1er8",
+      "key": "codCVV",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Monto a pagar",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_05jn4dt",
+        "columns": null
+      },
+      "id": "Field_05orygc",
+      "key": "valorPago",
+      "disabled": true
+    }
+  ],
+  "type": "default",
+  "id": "Realizar_Pago",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.33.1"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 18
+}
