@@ -43,20 +43,20 @@
     <bpmn:sequenceFlow id="Flow_0ccurnt" sourceRef="Event_1hydau3" targetRef="Activity_0d0zrsy" />
     <bpmn:sequenceFlow id="Flow_1rsfi9a" sourceRef="Activity_0d0zrsy" targetRef="Gateway_084qemo" />
     <bpmn:sequenceFlow id="Flow_0hrzh4a" name="si" sourceRef="Gateway_084qemo" targetRef="Activity_0j2i2t6">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${esAdmisible==valido}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${esAdmisible=="valido"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0lrmckv" name="no" sourceRef="Gateway_084qemo" targetRef="Event_1glpxv3">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${esAdmisible==noValido}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${esAdmisible=="noValido"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1jr2tnj" sourceRef="Activity_0j2i2t6" targetRef="Activity_0utvypp" />
     <bpmn:sequenceFlow id="Flow_18tx447" sourceRef="Activity_0utvypp" targetRef="Activity_0j1blrw" />
     <bpmn:sequenceFlow id="Flow_0svg8wb" sourceRef="Activity_0j1blrw" targetRef="Activity_1v0c4io" />
     <bpmn:sequenceFlow id="Flow_173l1ap" sourceRef="Activity_1v0c4io" targetRef="Gateway_0yiwh4m" />
     <bpmn:sequenceFlow id="Flow_1kmkyto" name="si" sourceRef="Gateway_0yiwh4m" targetRef="Activity_1vevdy4">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${consolidarEstado==si}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${consolidarEstado=="si"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0f8af7r" name="no" sourceRef="Gateway_0yiwh4m" targetRef="Activity_1smwtfc">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${consolidarEstado==no}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${consolidarEstado=="no"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0ohjqfv" sourceRef="Activity_1smwtfc" targetRef="Event_0ccsnwk" />
     <bpmn:sequenceFlow id="Flow_01wla5p" sourceRef="Activity_1vevdy4" targetRef="Event_0yj8zl2" />
@@ -65,7 +65,7 @@
       <bpmn:incoming>Flow_0ccurnt</bpmn:incoming>
       <bpmn:outgoing>Flow_1rsfi9a</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:serviceTask id="Activity_0j2i2t6" name="Generar guía de envío" camunda:class="com.example.workflow.guiaDevolucion">
+    <bpmn:serviceTask id="Activity_0j2i2t6" name="Generar guía de envío" camunda:class="com.example.workflow.ImprimirGuiaRetorno">
       <bpmn:incoming>Flow_0hrzh4a</bpmn:incoming>
       <bpmn:outgoing>Flow_1jr2tnj</bpmn:outgoing>
     </bpmn:serviceTask>
@@ -84,22 +84,22 @@
       <bpmn:incoming>Flow_0svg8wb</bpmn:incoming>
       <bpmn:outgoing>Flow_173l1ap</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:manualTask id="Activity_0j1blrw" name="Recibir pedido">
-      <bpmn:incoming>Flow_18tx447</bpmn:incoming>
-      <bpmn:outgoing>Flow_0svg8wb</bpmn:outgoing>
-    </bpmn:manualTask>
     <bpmn:manualTask id="Activity_0utvypp" name="Enviar producto para devolución">
       <bpmn:incoming>Flow_1jr2tnj</bpmn:incoming>
       <bpmn:outgoing>Flow_18tx447</bpmn:outgoing>
     </bpmn:manualTask>
-    <bpmn:task id="Activity_1smwtfc" name="Notificar las condiciones del producto">
+    <bpmn:manualTask id="Activity_0j1blrw" name="Recibir pedido">
+      <bpmn:incoming>Flow_18tx447</bpmn:incoming>
+      <bpmn:outgoing>Flow_0svg8wb</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:serviceTask id="Activity_1smwtfc" name="Notificar las condiciones del producto">
       <bpmn:incoming>Flow_0f8af7r</bpmn:incoming>
       <bpmn:outgoing>Flow_0ohjqfv</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:task id="Activity_1vevdy4" name="Procesar reembolso al método de pago del cliente">
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_1vevdy4" name="Procesar reembolso al método de pago del cliente">
       <bpmn:incoming>Flow_1kmkyto</bpmn:incoming>
       <bpmn:outgoing>Flow_01wla5p</bpmn:outgoing>
-    </bpmn:task>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Amazon_devoluciones">
@@ -168,16 +168,16 @@
       <bpmndi:BPMNShape id="Activity_1lvxbnb_di" bpmnElement="Activity_1v0c4io">
         <dc:Bounds x="1020" y="520" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0ax5fmy_di" bpmnElement="Activity_0j1blrw">
-        <dc:Bounds x="880" y="520" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0alsyah_di" bpmnElement="Activity_0utvypp">
         <dc:Bounds x="740" y="100" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1kysskp_di" bpmnElement="Activity_1smwtfc">
+      <bpmndi:BPMNShape id="Activity_0ax5fmy_di" bpmnElement="Activity_0j1blrw">
+        <dc:Bounds x="890" y="520" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ny2zap_di" bpmnElement="Activity_1smwtfc">
         <dc:Bounds x="1300" y="460" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0cb2j2j_di" bpmnElement="Activity_1vevdy4">
+      <bpmndi:BPMNShape id="Activity_1pw5fvf_di" bpmnElement="Activity_1vevdy4">
         <dc:Bounds x="1300" y="700" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0ccurnt_di" bpmnElement="Flow_0ccurnt">
@@ -216,10 +216,10 @@
         <di:waypoint x="840" y="140" />
         <di:waypoint x="860" y="140" />
         <di:waypoint x="860" y="560" />
-        <di:waypoint x="880" y="560" />
+        <di:waypoint x="890" y="560" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0svg8wb_di" bpmnElement="Flow_0svg8wb">
-        <di:waypoint x="980" y="560" />
+        <di:waypoint x="990" y="560" />
         <di:waypoint x="1020" y="560" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_173l1ap_di" bpmnElement="Flow_173l1ap">
