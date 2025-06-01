@@ -9,7 +9,8 @@
       },
       "id": "Field_1wqkpor",
       "key": "numTarjeta",
-      "disabled": true
+      "disabled": false,
+      "readonly": true
     },
     {
       "label": "ID del pedido",
@@ -20,7 +21,19 @@
       },
       "id": "Field_1bz8xsg",
       "key": "idPedido",
-      "disabled": true
+      "disabled": false,
+      "readonly": true
+    },
+    {
+      "label": "fecha de expiracion de la tarjeta",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1bppwxq",
+        "columns": null
+      },
+      "id": "Field_0488bd1",
+      "key": "fecExpiracion",
+      "readonly": true
     },
     {
       "label": "Resultado del pago",

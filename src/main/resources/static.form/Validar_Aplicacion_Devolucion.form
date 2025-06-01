@@ -1,6 +1,16 @@
 {
   "components": [
     {
+      "label": "Fecha en la que se hizo la compra",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_040obic",
+        "columns": null
+      },
+      "id": "Field_1dtswtf",
+      "key": "fechaCompra"
+    },
+    {
       "label": "Es admisible para devoluciones?",
       "values": [
         {

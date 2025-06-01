@@ -10,24 +10,19 @@
       "id": "Field_167mgqt",
       "key": "numTarjeta",
       "validate": {
-        "required": false,
-        "min": 4,
-        "max": 10
+        "required": true,
+        "max": 999999999
       }
     },
     {
-      "subtype": "date",
-      "dateLabel": "Fecha de expiracion",
-      "type": "datetime",
+      "label": "Fecha de expiracion ",
+      "type": "textfield",
       "layout": {
         "row": "Row_05jn4dt",
         "columns": null
       },
-      "id": "Field_0fym9vj",
-      "key": "fecExpira",
-      "validate": {
-        "required": false
-      }
+      "id": "Field_0m2x1az",
+      "key": "fecExpiracion"
     },
     {
       "label": "Codigo CVV",
@@ -39,23 +34,22 @@
       "id": "Field_12l1er8",
       "key": "codCVV",
       "validate": {
-        "required": false,
-        "min": 2,
-        "max": 4
+        "required": true,
+        "min": 1,
+        "max": 999
       }
     },
     {
-       "label": "Monto a pagar",
-       "type": "textfield",
-       "layout": {
-          "row": "Row_05jn4dt",
-         "columns": null
-        },
-       "id": "Field_05orygc",
-       "key": "valorPago",
-       "readonly": true,
-       "defaultValue": "=totalPagar"
-}
+      "label": "Monto a pagar",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_05jn4dt",
+        "columns": null
+      },
+      "id": "Field_1liz9rk",
+      "key": "totalPagar",
+      "readonly": true
+    }
   ],
   "type": "default",
   "id": "Realizar_Pago",

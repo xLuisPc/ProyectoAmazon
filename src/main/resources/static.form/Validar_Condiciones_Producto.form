@@ -11,7 +11,7 @@
       "key": "condicionProducto"
     },
     {
-      "label": "Se encuentra una relacion con respecto a lo que manifesto el cliente?",
+      "label": "En base al estado del producto es admisible para una devolución?",
       "values": [
         {
           "label": "Si",

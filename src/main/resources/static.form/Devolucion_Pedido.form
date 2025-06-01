@@ -15,14 +15,13 @@
       "disabled": false
     },
     {
-      "subtype": "date",
-      "dateLabel": "Fecha de la compra",
-      "type": "datetime",
+      "label": "Fecha de la compra",
+      "type": "textfield",
       "layout": {
-        "row": "Row_198rnfd",
+        "row": "Row_0fmkery",
         "columns": null
       },
-      "id": "Field_0gqlpsr",
+      "id": "Field_1hik76a",
       "key": "fechaCompra"
     },
     {
@@ -57,7 +56,7 @@
       "id": "Field_1y0pdkk",
       "key": "motivoDevolucion",
       "validate": {
-        "required": false
+        "required": true
       },
       "properties": {}
     }
