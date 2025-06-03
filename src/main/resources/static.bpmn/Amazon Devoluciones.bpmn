@@ -92,14 +92,14 @@
       <bpmn:incoming>Flow_18tx447</bpmn:incoming>
       <bpmn:outgoing>Flow_0svg8wb</bpmn:outgoing>
     </bpmn:manualTask>
-    <bpmn:serviceTask id="Activity_1smwtfc" name="Notificar las condiciones del producto">
+    <bpmn:task id="Activity_1smwtfc" name="Notificar las condiciones del producto">
       <bpmn:incoming>Flow_0f8af7r</bpmn:incoming>
       <bpmn:outgoing>Flow_0ohjqfv</bpmn:outgoing>
-    </bpmn:serviceTask>
-    <bpmn:serviceTask id="Activity_1vevdy4" name="Procesar reembolso al método de pago del cliente">
+    </bpmn:task>
+    <bpmn:task id="Activity_1vevdy4" name="Procesar reembolso al método de pago del cliente">
       <bpmn:incoming>Flow_1kmkyto</bpmn:incoming>
       <bpmn:outgoing>Flow_01wla5p</bpmn:outgoing>
-    </bpmn:serviceTask>
+    </bpmn:task>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Amazon_devoluciones">
@@ -174,10 +174,10 @@
       <bpmndi:BPMNShape id="Activity_0ax5fmy_di" bpmnElement="Activity_0j1blrw">
         <dc:Bounds x="890" y="520" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1ny2zap_di" bpmnElement="Activity_1smwtfc">
+      <bpmndi:BPMNShape id="Activity_0ynanyd_di" bpmnElement="Activity_1smwtfc">
         <dc:Bounds x="1300" y="460" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1pw5fvf_di" bpmnElement="Activity_1vevdy4">
+      <bpmndi:BPMNShape id="Activity_0j5glat_di" bpmnElement="Activity_1vevdy4">
         <dc:Bounds x="1300" y="700" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0ccurnt_di" bpmnElement="Flow_0ccurnt">
