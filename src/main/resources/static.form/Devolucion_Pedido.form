@@ -22,7 +22,8 @@
         "columns": null
       },
       "id": "Field_1hik76a",
-      "key": "fechaCompra"
+      "key": "fechaCompra",
+      "description": "DD-MM-YYYY (Ej: 02-09-2001)"
     },
     {
       "label": "Motivo de la devolución",
