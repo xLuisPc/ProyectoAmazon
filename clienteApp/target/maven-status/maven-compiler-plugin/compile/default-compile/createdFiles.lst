@@ -1,0 +1,5 @@
+com\clienteapp\controllers\ClienteController.class
+com\clienteapp\Application.class
+com\clienteapp\services\CamundaService$Task.class
+com\clienteapp\services\CamundaService$FormResponse.class
+com\clienteapp\services\CamundaService.class

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Selección de Procesos</title>
+</head>
+<body>
+    <h1>Bienvenido</h1>
+    <p>Selecciona el proceso que deseas iniciar:</p>
+
+    <ul>
+        <li><a th:href="@{/formulario-inicio?proceso=Devoluciones_Amazon}">Iniciar Devolución</a></li>
+        <li><a th:href="@{/formulario-inicio?proceso=Otro_Proceso}">Iniciar Otro Proceso</a></li>
+        <!-- Puedes agregar más procesos aquí -->
+    </ul>
+</body>
+</html>

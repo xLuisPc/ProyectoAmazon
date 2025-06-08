@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+  <form role="form" action="/start-process" method="post">
+    <input type="hidden" name="proceso" th:value="${proceso}" />
+    <!-- Nombre del comprador -->
+    <div class="form-group">
+      <label for="nombre">Nombre del comprador:</label>
+      <input type="text"
+             id="nombre"
+             name="nombre"
+             required />
+    </div>
+
+    <!-- Fecha de la compra -->
+    <div class="form-group">
+      <label for="fechaCompra">Fecha de la compra:</label>
+      <input type="date"
+             id="fechaCompra"
+             name="fechaCompra" />
+    </div>
+
+    <!-- Motivo de la devolución -->
+    <div class="form-group">
+      <label>Motivo de la devolución:</label><br />
+      <input type="radio" name="motivo" value="porDefecto" required /> Producto defectuoso<br />
+      <input type="radio" name="motivo" value="porProducto" /> Producto erroneo<br />
+      <input type="radio" name="motivo" value="porAccesorios" /> Producto incompleto<br />
+      <input type="radio" name="motivo" value="porTiempo" /> No satisfecho con el producto<br />
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
