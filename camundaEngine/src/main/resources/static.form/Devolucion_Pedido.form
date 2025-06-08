@@ -1,0 +1,67 @@
+{
+  "components": [
+    {
+      "label": "Nombre del comprador",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1euyust",
+        "columns": null
+      },
+      "id": "Field_0yv79f6",
+      "key": "nombre",
+      "validate": {
+        "required": true
+      },
+      "disabled": false
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Fecha de la compra",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0vdl9a3",
+        "columns": null
+      },
+      "id": "Field_18e1227",
+      "key": "fechaCompra",
+      "description": "En caso de no despliegue del calendario ingresarlo manualmente DD/MM/YYYY"
+    },
+    {
+      "label": "Motivo de la devolución",
+      "values": [
+        {
+          "label": "Producto defectuoso",
+          "value": "porDefecto"
+        },
+        {
+          "label": "Producto erroneo",
+          "value": "porProducto"
+        },
+        {
+          "label": "Producto incompleto",
+          "value": "porAccesorios"
+        },
+        {
+          "label": "No satisfecho con el producto",
+          "value": "porTiempo"
+        }
+      ],
+      "type": "radio",
+      "layout": {
+        "row": "Row_0mao9tw",
+        "columns": null
+      },
+      "id": "Field_0b251cq",
+      "key": "motivo"
+    }
+  ],
+  "type": "default",
+  "id": "Devolucion_Pedido",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.33.1"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 18
+}

@@ -1,0 +1,41 @@
+{
+  "components": [
+    {
+      "label": "Distribuidor Nacional",
+      "values": [
+        {
+          "label": "Amazon logistics",
+          "value": "value"
+        },
+        {
+          "label": "Fedex",
+          "value": "value2"
+        },
+        {
+          "label": "DHL",
+          "value": "value3"
+        },
+        {
+          "label": "UPS",
+          "value": "value4"
+        }
+      ],
+      "type": "radio",
+      "layout": {
+        "row": "Row_0tltzdv",
+        "columns": null
+      },
+      "id": "Field_1v9nwyy",
+      "key": "distriNacional"
+    }
+  ],
+  "type": "default",
+  "id": "Distribuidor_Nacional",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.33.1"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 18
+}

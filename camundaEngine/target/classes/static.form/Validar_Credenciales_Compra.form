@@ -1,0 +1,68 @@
+{
+  "components": [
+    {
+      "label": "Numero de tarjeta",
+      "type": "number",
+      "layout": {
+        "row": "Row_10gqn5h",
+        "columns": null
+      },
+      "id": "Field_1wqkpor",
+      "key": "numTarjeta",
+      "disabled": false,
+      "readonly": true
+    },
+    {
+      "label": "ID del pedido",
+      "type": "number",
+      "layout": {
+        "row": "Row_1bppwxq",
+        "columns": null
+      },
+      "id": "Field_1bz8xsg",
+      "key": "idPedido",
+      "disabled": false,
+      "readonly": true
+    },
+    {
+      "label": "fecha de expiracion de la tarjeta",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1bppwxq",
+        "columns": null
+      },
+      "id": "Field_0488bd1",
+      "key": "fecExpiracion",
+      "readonly": true
+    },
+    {
+      "label": "Resultado del pago",
+      "values": [
+        {
+          "label": "Aprobado",
+          "value": "aprobado"
+        },
+        {
+          "label": "Denegado",
+          "value": "denegado"
+        }
+      ],
+      "type": "radio",
+      "layout": {
+        "row": "Row_0mv1dpp",
+        "columns": null
+      },
+      "id": "Field_0adis08",
+      "key": "resPago"
+    }
+  ],
+  "type": "default",
+  "id": "Validar_Credenciales_Compra",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.33.1"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 18
+}

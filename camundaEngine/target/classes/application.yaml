@@ -1,0 +1,7 @@
+camunda:
+  bpm:
+    admin-user:
+      id: admin
+      password: 123
+    webapp:
+      index-redirect-enabled: true

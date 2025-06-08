@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "label": "Producto",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0js8zkc",
+        "columns": null
+      },
+      "id": "Field_1czh4t0",
+      "key": "producto"
+    },
+    {
+      "label": "cantidad del inventario",
+      "type": "number",
+      "layout": {
+        "row": "Row_1jyf8mu",
+        "columns": null
+      },
+      "id": "Field_1cm6p3d",
+      "key": "cantidadInventario"
+    }
+  ],
+  "type": "default",
+  "id": "Nivel_Inventario",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.33.1"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 18
+}
